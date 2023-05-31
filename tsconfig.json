@@ -9,5 +9,5 @@
   },
   "include": [
     "cypress/**/*.js"
-  ]
+, "cypress/e2e/app.cy.ts"  ]
 }
