@@ -23,7 +23,7 @@ async function setupNodeEvents(
 
 export default defineConfig({
   e2e: {
-    specPattern: "**/*.feature",
+    specPattern: ["**/*.feature", "**/*.cy.ts"],
     setupNodeEvents,
     baseUrl: "http://localhost:8888",
   },

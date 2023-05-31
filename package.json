@@ -35,6 +35,7 @@
     "@axa-fr/cypress-component": "0.0.9",
     "@badeball/cypress-cucumber-preprocessor": "17.2.0",
     "@bahmutov/cypress-esbuild-preprocessor": "2.2.0",
+    "@cucumber/cucumber": "9.1.2",
     "axe-core": "4.6.2",
     "cypress": "12.13.0",
     "cypress-axe": "0.9.1",
@@ -51,6 +52,11 @@
       "cypress/e2e/[filepath].{js,ts}",
       "cypress/support/step_definitions/**/*.{js,ts}",
       "cypress/e2e/common/*.ts"
-    ]
+    ],
+    "json": {
+      "enabled": true,
+      "formatter": "reporters/cucumber-json-formatter",
+      "output": "cypress/reports/cucumber-json/cucumber.json"
+    }
   }
 }
