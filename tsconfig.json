@@ -3,11 +3,16 @@
     "lib": ["es2015", "dom"],
     "allowJs": true,
     "noEmit": true,
-    "types": [
-      "cypress"
-    ]
+    "types": ["cypress"],
+
+    "esModuleInterop": true,
+    //Si ça fonctionne normalement, on devrait utiliser ça
+    // "moduleResolution": "node16"
+    "paths": {
+      "@badeball/cypress-cucumber-preprocessor/*": [
+        "./node_modules/@badeball/cypress-cucumber-preprocessor/dist/bundler-utils/*"
+      ]
+    }
   },
-  "include": [
-    "cypress/**/*.js"
-, "cypress/e2e/app.cy.ts"  ]
+  "include": ["cypress/**/*.js", "cypress/e2e/app.cy.ts", "**/*.ts"]
 }
